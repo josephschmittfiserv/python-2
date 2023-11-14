@@ -1,10 +1,12 @@
 
 # Update with your student id.
-from students.stu0.assignments import *
+from src.assignments import *
 
 
 def main():
     ex1()
+    ex2()
+
 
 
 if __name__ == '__main__':
