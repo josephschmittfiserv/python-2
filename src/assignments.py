@@ -6,6 +6,8 @@ from pprint import pprint
 from Fighter import Fighter
 from Character import Character
 from Dwarf import Dwarf
+from Invoice import Invoice
+from dataclasses import dataclass
 # define and/or call your methods here:
 def ex1():
     people_list = [
@@ -130,7 +132,23 @@ def ex9():
 
 def ex10():
     
+    
+    data = [
+        "1, 2322, 10.00, False",
+        "2, 5435, 60.30, True",
+        "3, 3433, 15.63, False",
+        "4, 8439, 12.77, False",
+        "5, 3424, 11.34, False",
+    ]
+    
+    invoice_list=[]
 
+    for item in data:
+        values = item.split(", ")
+        invoice = Invoice(values[0],values[1],values[2],values[3])
+        invoice_list.append(invoice)
+        
+    pprint(invoice_list)
 
 
 if __name__ == '__main__':
